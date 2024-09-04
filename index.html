@@ -188,16 +188,12 @@
                   <div class="vert">
                     <div class="container">
                       <div
-                        class="slide-txt1 text-no-uppercase"
-                        data-animation="fadeInDown"
-                        data-animation-delay="1s"
+                        class="slide-txt1 typing-effect slide-1"
                       >
                       Compassionate Care for Every <br> <strong>Stage of Your Cancer Battle</strong>
                       </div>
                       <div
-                        class="slide-txt2 text-no-uppercase"
-                        data-animation="fadeInUp"
-                        data-animation-delay="1.5s"
+                        class="slide-txt2 typing-effect slide-1"
                       >
                         Advanced medicine compassionate care
                       </div>
@@ -227,16 +223,12 @@
                   <div class="vert">
                     <div class="container">
                       <div
-                        class="slide-txt1 text-no-uppercase"
-                        data-animation="fadeInDown"
-                        data-animation-delay="1s"
+                        class="slide-txt1 typing-effect slide-2"
                       >
                       Redefining Cancer Care <br> <strong>with Holistic Support</strong>
                       </div>
                       <div
-                        class="slide-txt2 text-no-uppercase"
-                        data-animation="fadeInUp"
-                        data-animation-delay="1.5s"
+                        class="slide-txt2 typing-effec slide-2"
                       >
                         Highest standards of customer service
                       </div>
@@ -266,16 +258,12 @@
                   <div class="vert">
                     <div class="container">
                       <div
-                        class="slide-txt1 text-no-uppercase"
-                        data-animation="fadeInDown"
-                        data-animation-delay="1s"
+                        class="slide-txt1 typing-effect slide-3"
                       >
                       Innovating cancer care with <br> <strong>advanced medicine solution</strong>
                       </div>
                       <div
-                        class="slide-txt2 text-no-uppercase"
-                        data-animation="fadeInUp"
-                        data-animation-delay="1.5s"
+                        class="slide-txt2 typing-effect slide-3"
                       >
                         Highest standards of customer service
                       </div>
@@ -299,6 +287,25 @@
         </div>
       </div>
       <!--//section slider-->
+      <script>
+        // Function to restart animation by resetting CSS class
+        function restartAnimation(element) {
+          element.style.animation = 'none';  // Disable the animation
+          element.offsetHeight; // Trigger reflow to reset the animation
+          element.style.animation = '';  // Re-enable the animation
+        }
+
+        // Attach an event listener to slide change events
+        document.addEventListener('DOMContentLoaded', function () {
+          const slides = document.querySelectorAll('.typing-effect'); // Select all elements with typing effect
+
+          slides.forEach(slide => {
+            slide.addEventListener('animationend', function () {
+              restartAnimation(slide); // Restart animation for each slide
+            });
+          });
+        });
+      </script>
       <!--section departments-->
       <div
         class="section bg-bottom bg-right bg-norepeat bg-md-none bg-fixed section-bottom-padding section-top-padding"
