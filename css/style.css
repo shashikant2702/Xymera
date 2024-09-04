@@ -12309,7 +12309,8 @@ body.noScroll {
     #mainSlider .slide-txt1:not(:first-child) {
       margin-top: .3em; }
   #mainSlider .slide-btn {
-    margin-top: 30px !important; }
+    margin-top: 100px !important;
+  width: 30px; }
   @media (min-width: 1024px) {
     #mainSlider .slide-btn .btn,
     #mainSlider .slide-btn .btn:focus {
@@ -13032,7 +13033,7 @@ body:not(.touch) .services-tab-wrap .nav-link:hover {
     flex: 0 0 calc(50% - 30px);
     min-width: calc(50% - 30px);
     margin: 15px;
-    background-color: #ffffff; }
+    background-color: pink; }
   @media (max-width: 1023px) {
     .department-tabs2 {
       margin: -10px -10px 0; }
